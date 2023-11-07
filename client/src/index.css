@@ -2,16 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-input[type="email"],input[type="password"],input[type="text"], input[type="number"],input[type="tel"],textarea{
-    @apply w-full border my-1 px-3 py-2 rounded-2xl;
+/* FFF3E2, FFE5CA, FA9884, E74646 */
+/* 618264, 79AC78, B0D9B1, D0E7D2 */
+
+body {
+/* background-color: #D0E7D2;
+background-image: url("https://www.transparenttextures.com/patterns/subtle-white-feathers.png"); */
+background-color: #FFF5E0;
+background-image: url("https://www.transparenttextures.com/patterns/subtle-white-feathers.png");
+}
+
+.homepage {
+    display: flex;
+    flex-direction: row;
+}
+
+.tagline {
+  font-weight: bolder;
+  margin: 2rem;
+  padding-top: 20%;
+  padding-bottom: 5rem;
+  line-height: 5rem;
+}
+
+.homepagepic {
+  height: 35rem;
+  width: 35rem;
+  border-radius: 20rem;
+  /* border-color: #3E001F; */
+  border-color: #3E001F;
+  border-style: solid;
+  border-width: 10px;
+}
+
+.homepageheadingcontainer {
+    padding-left: 5%;
+    width: 55%;
+    color: #3E001F;
+}
+
+.homepagepicontainer {
+    padding-top: 3rem;
+    width: 45%;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+textarea {
+  @apply w-full border my-1 px-3 py-2 rounded-2xl border border-primary;
 }
 textarea {
-    height: 140px;
+  height: 140px;
 }
-button{
-    @apply bg-gray-300;
+button {
+  @apply bg-gray-300;
 }
-button.primary{
-    background-color: '#FF385C';
-    @apply bg-primary p-2 w-full text-white rounded-2xl;
+button.primary {
+  background-color: "#3E001F";
+  @apply bg-primary p-2 w-full text-white rounded-2xl;
 }

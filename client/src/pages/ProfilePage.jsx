@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { UserContext } from "../UserContext";
 import { Navigate, useParams } from "react-router-dom";
 import axios from "axios";
-import JournalPage from "./JournalPage";
+import JournalPage from "./JournalsPage";
 import AccountNav from "../components/AccountNav";
 
 export default function ProfilePage() {

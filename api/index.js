@@ -5,6 +5,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const cookieParser = require('cookie-parser');
 const User = require("./models/Users.js");
+const Journal = require("./models/Journal.js");
 require("dotenv").config();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -74,6 +75,73 @@ app.get("/profile", (req,res) => {
 
 app.post("/logout", (req,res) => {
   res.cookie('token', '').json(true);
-})
+});
+
+app.post("/journals", (req, res) => {
+  const { token } = req.cookies;
+  const {
+    title,
+    content, } = req.body;
+  if (token) {
+    jwt.verify(token, jwtSecret, {}, async (err, user) => {
+      if (err) throw err;
+      const journalDoc = await Journal.create({
+        owner: user.id,
+        title,
+        content,
+      });
+      res.json(journalDoc);
+    });
+  } else {
+    res.json(null);
+  }
+});
+
+app.get("/user-journals", (req, res) => {
+  const { token } = req.cookies;
+  if (token) {
+    jwt.verify(token, jwtSecret, {}, async (err, user) => {
+      if (err) throw err;
+      const { id } = user;
+      res.json(await Journal.find({ owner: id }));
+    });
+  } else {
+    res.json(null);
+  }
+});
+
+app.get("/journals/:id", async (req, res) => {
+  const { id } = req.params;
+  res.json(await Journal.findById(id));
+});
+
+app.put("/journals", async (req, res) => {
+  const { token } = req.cookies;
+  const {
+    id,
+    title,
+    content,
+  } = req.body;
+  if (token) {
+    jwt.verify(token, jwtSecret, {}, async (err, user) => {
+      if (err) throw err;
+      const journalDoc = await Journal.findById(id);
+      if (user.id === journalDoc.owner.toString()) {
+        journalDoc.set({
+          title,
+          content,
+        });
+        await journalDoc.save();
+        res.json("ok");
+      }
+    });
+  } else {
+    res.json(null);
+  }
+});
+
+app.get("/journals", async (req, res) => {
+  res.json(await Journal.find());
+});
 
 app.listen(3000);

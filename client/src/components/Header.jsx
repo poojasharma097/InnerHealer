@@ -24,12 +24,12 @@ export default function Header() {
 
         <span className="font-bold text-xl">InnerHealer</span>
       </Link>
-      <div className="flex border border-primary rounded-full py-2 px-4 gap-2 shadow-sm shadow-primary">
+      <div className="flex font-bold border border-[#3E001F] rounded-full py-2 px-4 gap-2 shadow-sm shadow-[#3E001F]">
         Helping students fight the war within.
       </div>
       <Link
         to={user ? "/account" : "/login"}
-        className="flex border border-gray-300 rounded-full py-2 px-4 gap-2 items-center"
+        className="flex border border-[#3E001F] rounded-full py-2 px-4 gap-2 items-center"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
