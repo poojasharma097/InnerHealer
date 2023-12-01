@@ -10,6 +10,9 @@ import { UserContextProvider } from "./UserContext";
 import JournalsPage from "./pages/JournalsPage";
 import QuizPage from "./pages/QuizzesPage";
 import JournalFormPage from "./pages/JournalFormPage";
+import GuidedMeditation from "./pages/GuidedMeditation";
+import EducationalArticles from "./pages/EducationalArticles";
+import Help from "./pages/Help";
 
 axios.defaults.baseURL = "http://localhost:3000";
 axios.defaults.withCredentials = true;
@@ -27,8 +30,9 @@ function App() {
           <Route path="/account/journals/new" element={<JournalFormPage />} />
           <Route path="/account/journals/:id" element={<JournalFormPage />} />
           <Route path="/account/quizzes" element={<QuizPage/>}/>
-          {/* https://www.hiv.uw.edu/page/mental-health-screening/phq-9 */}
-          {/* https://www.psycom.net/anxiety-test */}
+          <Route path="/account/meditation" element={<GuidedMeditation />} />
+          <Route path="/account/articles" element={<EducationalArticles />} />
+          <Route path="/account/help" element={<Help />} />
         </Route>
       </Routes>
     </UserContextProvider>

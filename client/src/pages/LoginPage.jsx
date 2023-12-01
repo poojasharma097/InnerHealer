@@ -10,15 +10,39 @@ export default function LoginPage() {
 
   const {user, setUser} = useContext(UserContext);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const {data} = axios.post("/login", {email, password }).then(() => {
+    try {
+      const response = await axios.post("/login", { email, password });
+      const { data } = response;
+  
+      if (data === "password not ok") {
+        alert("Login failed because of incorrect password. Redirecting to login page again.");
+        window.location.href = '/login';
+      } else if (data === "not found") {
+        alert("User not found. Please register.");
+        window.location.href = '/register';
+      } else {
         setUser(data);
         console.log(user);
-      alert("Login successful.");
-      setRedirect(true);
-    });
+        alert("Login successful.");
+        setRedirect(true);
+      }
+    } catch (error) {
+      console.error("An error occurred during login:", error);
+    }
   };
+  
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   const {data} = await axios.post("/login", {email, password }).then(() => {
+  //       setUser(data);
+  //       console.log(user);
+  //     alert("Login successful.");
+  //     setRedirect(true);
+  //   })
+  // };
   
   if (redirect) {
     return <Navigate to={'/'} />

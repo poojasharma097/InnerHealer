@@ -36,7 +36,7 @@ background-image: url("https://www.transparenttextures.com/patterns/subtle-white
 }
 
 .homepageheadingcontainer {
-    padding-left: 5%;
+    padding-left: 3%;
     width: 55%;
     color: #3E001F;
 }
@@ -44,6 +44,89 @@ background-image: url("https://www.transparenttextures.com/patterns/subtle-white
 .homepagepicontainer {
     padding-top: 3rem;
     width: 45%;
+}
+
+.quotecontainer {
+  padding-bottom: 3%;
+  padding-top: 3%;
+  text-align: center;
+  color: #3E001F;
+}
+
+.quoteheading {
+  font-size: 60px;
+  padding-bottom: 1%;
+}
+
+.quotecontent {
+  font-size: 30px;
+}
+
+.newstitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.headline {
+  margin: 1%;
+}
+
+.journalquote {
+  text-align: center;
+  font-size: larger;
+  font-style: italic;
+}
+
+.icon {
+  align-items: end;
+}
+
+.quizcontainer {
+  padding-bottom: 3%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.quizhistorycontainer {
+  padding-left: 2%;
+  padding-right: 2%;
+  text-align: center;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 1em 1em;
+  margin: 0 auto; 
+}
+
+.quizheading {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 500;
+  padding-bottom: 1%;
+}
+
+input[type="radio"] {
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.meditationcontainer {
+  padding-left: 2%;
+  padding-right: 2%;
+  text-align: center;
+}
+
+.meditationvideo {
+  display: block;
+  margin: auto;
+  text-align: center;
+  width: 300px;
+  height: 150px;
+}
+
+.article {
+  margin: 1%;
 }
 
 input[type="email"],

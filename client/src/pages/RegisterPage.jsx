@@ -6,11 +6,13 @@ export default function RegisterPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post("/register", { name, email, password }).then((response) => {
       console.log(response);
       alert("Registration successful. Now you can log in.");
+      window.location.href = '/login';
     });
   };
   return (
