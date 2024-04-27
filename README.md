@@ -13,6 +13,23 @@ Web-Based Medical Diagnostic system
 * ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 * ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
+## Screenshots
+<kbd><img src="https://github.com/poojasharma097/InnerHealer/blob/main/screenshots/InnerHealer-Home.png" /></kbd> 
+&nbsp;&nbsp;&nbsp;
+<kbd><img src="https://github.com/poojasharma097/InnerHealer/blob/main/screenshots/InnerHealer-Profile.png" /></kbd>
+&nbsp;&nbsp;&nbsp;
+<kbd><img src="https://github.com/poojasharma097/InnerHealer/blob/main/screenshots/InnerHealer-Journal.png" /></kbd>
+&nbsp;&nbsp;&nbsp;
+<kbd><img src="https://github.com/poojasharma097/InnerHealer/blob/main/screenshots/InnerHealer-Journals.png" /></kbd>
+&nbsp;&nbsp;&nbsp;
+<kbd><img src="https://github.com/poojasharma097/InnerHealer/blob/main/screenshots/InnerHealer-Quiz.png" /></kbd>
+&nbsp;&nbsp;&nbsp;
+<kbd><img src="https://github.com/poojasharma097/InnerHealer/blob/main/screenshots/InnerHealer-Session.png" /></kbd>
+&nbsp;&nbsp;&nbsp;
+<kbd><img src="https://github.com/poojasharma097/InnerHealer/blob/main/screenshots/InnerHealer-Article.png" /></kbd>
+&nbsp;&nbsp;&nbsp;
+<kbd><img src="https://github.com/poojasharma097/InnerHealer/blob/main/screenshots/InnerHealer-Help.png" /></kbd>
+
 ## Contact Me
 LinkedIn Profile: [Pooja Sharma](https://www.linkedin.com/in/pooja-sharma-a80458222/)
 
